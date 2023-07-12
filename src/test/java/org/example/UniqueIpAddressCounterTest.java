@@ -14,6 +14,11 @@ public class UniqueIpAddressCounterTest {
     }
 
     @Test
+    public void shouldGetUniqueIPCountWhenFileIsBig() throws IOException {
+        assertEquals(255, UniqueIpAddressCounter.getUniqueIPCount("src/test/resources/bigFile"));
+    }
+
+    @Test
     public void shouldGetUniqueIPCountWhenNoAddresses() throws IOException {
         assertEquals(0, UniqueIpAddressCounter.getUniqueIPCount("src/test/resources/emptyFile"));
     }
