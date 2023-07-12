@@ -10,17 +10,17 @@ public class UniqueIpAddressCounterTest {
 
     @Test
     public void shouldGetUniqueIPCount() throws IOException {
-        assertEquals(5, UniqueIpAddressCounter.getUniqueIPCount("src/test/resources/ips.txt"));
+        assertEquals(5, UniqueIpAddressCounter.getUniqueIPCount("src/test/resources/someIpsFile"));
     }
 
     @Test
     public void shouldGetUniqueIPCountWhenNoAddresses() throws IOException {
-        assertEquals(0, UniqueIpAddressCounter.getUniqueIPCount("src/test/resources/emptyFile.txt"));
+        assertEquals(0, UniqueIpAddressCounter.getUniqueIPCount("src/test/resources/emptyFile"));
     }
 
     @Test
     public void shouldGetUniqueIPCountWhenFileContainsNonAddress() throws IOException {
-        assertEquals(1, UniqueIpAddressCounter.getUniqueIPCount("src/test/resources/ipsWithNoIp.txt"));
+        assertEquals(1, UniqueIpAddressCounter.getUniqueIPCount("src/test/resources/containsNoIpFile"));
     }
 
 }
