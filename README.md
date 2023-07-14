@@ -31,3 +31,5 @@ Total of IP addresses 2^32
 Integer range is from -2,147,483,648 to 2,147,483,647
 
 two BitSet objects are used, `positiveHashCodeSet` and `negativeHashCodeSet`, are used to track the occurrence of unique IP addresses. The bits in these BitSet objects are set based on the hash codes of the IP addresses encountered in the input file
+
+**./gradlew run --args='fileName'** 
